@@ -43,13 +43,7 @@
                 we are there to serve you.Read our testimonials below.Once again thanks and welcome!
             
             </p>
-            <p>This paragraph has children <span>spans</span> and <span>q</span>, which, in turn, have their own child <span>spans</span>.
-
-                <q>With this structure, we can see how some CSS <span>rules</span> are
-                <span>applied across a <q>variety</q></span> of scopes.</q>
-                </p>
-        
-         
+            
    
 </aside>
 <main>
@@ -63,11 +57,18 @@
         we are there to serve you.Read our testimonials below.Once again thanks and welcome!
     
     </p>
-    <p>This paragraph has children <span>spans</span> and <span>q</span>, which, in turn, have their own child <span>spans</span>.
+  <ul class="list-group- t20">
+      {% for todolist in todo_items %}
+      {% if  todolist.completed %}
+      <li class="list-group-item todo-completed">{{todolist.text}}</li>
+      {% else %}
+     <a href="#"><li class="list-group-item">{{todolist.text}}</li></a> 
+       {% endif %} 
+      {% endfor %}
+      
+  </ul>  
+        
 
-        <q>With this structure, we can see how some CSS <span>rules</span> are
-        <span>applied across a <q>variety</q></span> of scopes.</q>
-        </p>
 </main>
 
 <section>
